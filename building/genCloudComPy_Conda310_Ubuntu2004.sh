@@ -21,7 +21,7 @@ if [ -d ${HOME}/projets/CloudComPy/Occ-740p3_opt ]; then
 elif [ -d ${HOME}/projets/hydro95/prerequisites/install/Occ-740p3_opt ]; then
     export OPENCASCADE_REP=${HOME}/projets/hydro95/prerequisites/install/Occ-740p3_opt
 else
-    export OPENCASCADE_REP=/home/paul/projets/hydro95/prerequisites/install/Occ-740p3EDFp1 
+    export OPENCASCADE_REP=${HOME}/projets/hydro95/prerequisites/install/Occ-740p3EDFp1 
 fi
 export NBTHREADS="$(grep -c processor /proc/cpuinfo)"                                  # number of threads for parallel make
 
@@ -121,7 +121,7 @@ cloudcompy_configure()
     -DPLUGIN_IO_QCSV_MATRIX:BOOL="1" \
     -DPLUGIN_IO_QDRACO:BOOL="1" \
     -DPLUGIN_IO_QE57:BOOL="1" \
-    -DPLUGIN_IO_QFBX:BOOL="1" \
+    -DPLUGIN_IO_QFBX:BOOL="0" \
     -DPLUGIN_IO_QLAS:BOOL="1" \
     -DPLUGIN_IO_QLAS_FWF:BOOL="0" \
     -DPLUGIN_IO_QPDAL:BOOL="0" \
@@ -129,7 +129,7 @@ cloudcompy_configure()
     -DPLUGIN_IO_QRDB:BOOL="1" \
     -DPLUGIN_IO_QRDB_FETCH_DEPENDENCY:BOOL="1" \
     -DPLUGIN_IO_QRDB_INSTALL_DEPENDENCY:BOOL="1" \
-    -DPLUGIN_IO_QSTEP:BOOL="1" \
+    -DPLUGIN_IO_QSTEP:BOOL="0" \
     -DPLUGIN_STANDARD_MASONRY_QAUTO_SEG:BOOL="1" \
     -DPLUGIN_STANDARD_MASONRY_QMANUAL_SEG:BOOL="1" \
     -DPLUGIN_STANDARD_QANIMATION:BOOL="1" \
@@ -138,14 +138,14 @@ cloudcompy_configure()
     -DPLUGIN_STANDARD_QCLOUDLAYERS:BOOL="1" \
     -DPLUGIN_STANDARD_QCOLORIMETRIC_SEGMENTER:BOOL="1" \
     -DPLUGIN_STANDARD_QCOMPASS:BOOL="1" \
-    -DPLUGIN_STANDARD_QCORK:BOOL="1" \
+    -DPLUGIN_STANDARD_QCORK:BOOL="0" \
     -DPLUGIN_STANDARD_QCSF:BOOL="1" \
     -DPLUGIN_STANDARD_QFACETS:BOOL="1" \
     -DPLUGIN_STANDARD_QHOUGH_NORMALS:BOOL="1" \
     -DPLUGIN_STANDARD_QHPR:BOOL="1" \
     -DPLUGIN_STANDARD_QJSONRPC:BOOL="1" \
     -DPLUGIN_STANDARD_QM3C2:BOOL="1" \
-    -DPLUGIN_STANDARD_QMESH_BOOLEAN:BOOL="1" \
+    -DPLUGIN_STANDARD_QMESH_BOOLEAN:BOOL="0" \
     -DPLUGIN_STANDARD_QMPLANE:BOOL="1" \
     -DPLUGIN_STANDARD_QPCL:BOOL="1" \
     -DPLUGIN_STANDARD_QPCV:BOOL="1" \
